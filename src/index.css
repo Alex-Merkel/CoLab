@@ -1,0 +1,127 @@
+/* 
+Co.Lab Colors:
+Blue: #5FBEFF
+Yellow: #FFCC35
+ */
+
+.navbar {
+  color: var(--primary-text-color);
+  z-index: 1;
+}
+
+.footer {
+  color: var(--primary-text-color);
+}
+
+.custom-image {
+  width: 300px;
+  height: 200px;
+}
+
+.github-logo {
+  width: 200px;
+  height: 200px;
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pic-link:hover, .github-link:hover {
+  border: 3px solid red;
+  border-radius: 5px;
+}
+
+#projects {
+  color: var(--primary-text-color);
+}
+
+#intro, #about {
+  background: radial-gradient(ellipse at center, var(--foreground-color), var(--toggle-bg));
+  color: var(--primary-text-color);
+}
+
+.underline-title {
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  color: var(--foreground-color)!important;
+}
+
+.navbar-brand:hover {
+  color: var(--foreground-color) !important;
+}
+
+.icon {
+  color: var(--primary-text-color);
+}
+
+.icon:hover {
+  transform: scale(1.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+:root {
+  --background-color: #f0f0f0;
+  --foreground-color: #FFCC35;
+  --primary-text-color: #0a0a0a;
+  --secondary-text-color: #f6f6f6;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #FFCC35;
+}
+
+[data-theme="dark"] {
+  --background-color: #0a0a0a;
+  --foreground-color: #5FBEFF;
+  --primary-text-color: #e5e2e2;
+  --secondary-text-color: #0a0a0a;
+  --toggle-bg: #1e48b3;
+  --toggle-fg: #5FBEFF;
+}
+
+.toggle-container {
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.toggle + label {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: white;
+}
+
+.toggle + label::before {
+  content: "";
+  height: 1em;
+  width: 2em;
+  border-radius: 1em;
+  background-color: var(--toggle-bg);
+  margin-right: 0.5em;
+  transition: background-color 250ms ease-in-out;
+}
+
+.toggle + label::after {
+  content: "";
+  height: 0.8em;
+  width: 0.8em;
+  border-radius: 1em;
+  background-color: var(--toggle-fg);
+  position: absolute;
+  left: 0.2em;
+  transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+}
+
+.toggle:checked + label::after {
+  transform: translateX(100%);
+}
