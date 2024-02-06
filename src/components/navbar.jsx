@@ -33,10 +33,10 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navmenu">
                     <ul className="navbar navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a href="#projects" onClick={() => scrollToElement('projects')} className="nav-link">Projects</a>
+                            <a href="#projects" onClick={() => scrollToElement('projects')} className="nav-link" id="nav-link">Projects</a>
                         </li>
                         <li className="nav-item">
-                            <a href="#about" onClick={() => scrollToElement('about')} className="nav-link">About</a>
+                            <a href="#about" onClick={() => scrollToElement('about')} className="nav-link" id="nav-link">About</a>
                         </li>             
                     </ul>
                 </div>

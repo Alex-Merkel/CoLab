@@ -1,26 +1,91 @@
-/* 
-Co.Lab Colors:
-Blue: #5FBEFF
-Yellow: #FFCC35
- */
-
-.navbar {
+.navbar, #nav-link, #nav-header, #toggle-label {
   color: var(--primary-text-color);
   z-index: 1;
 }
 
-.footer {
-  color: var(--primary-text-color);
+#projects, .footer { 
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+} 
+
+#projects .wave, .footer .wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 10% 30%,
+    rgba(5, 17, 108, 0.4) 10%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 80% 50%,
+    rgba(12, 39, 128, 0.4) 10%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 50% 80%,
+    rgba(14, 17, 148, 0.4) 10%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 20% 70%,
+    rgba(22, 3, 100, 0.3) 20%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 90% 20%,
+    rgba(14, 3, 109, 0.3) 20%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 70% 90%,
+    rgba(22, 49, 138, 0.3) 20%,
+    transparent 50%
+  );
+  background-size: 400% 400%;
+  animation: wave 6s infinite alternate;
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 200% 0, 200% 0, 200% 0, 200% 0, 200% 0, 200% 0;
+  }
 }
 
 .custom-image {
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px
 }
 
 .github-logo {
   width: 200px;
   height: 200px;
+}
+
+.github-link {
+  color: var(--toggle-bg);
+  
+  width: 70px;
+  height: 70px;
+  margin-top: 60px;
+}
+
+#previous-button, #next-button {
+  color: var(--toggle-bg);
+  background-color: var(--background-color);
+  border: none;
+  margin: 10px;
+}
+
+.fa-icon {
+  --fa-animation-duration: 3s;
 }
 
 .project-link {
@@ -29,12 +94,8 @@ Yellow: #FFCC35
 }
 
 .pic-link:hover, .github-link:hover {
-  border: 3px solid red;
-  border-radius: 5px;
-}
-
-#projects {
-  color: var(--primary-text-color);
+  transform: scale(1.5);
+  transition: transform 0.2s ease-in-out;
 }
 
 #intro, #about {
@@ -46,7 +107,7 @@ Yellow: #FFCC35
   text-decoration: underline;
 }
 
-.nav-link:hover {
+.nav-link:hover, #toggle-label:hover {
   color: var(--foreground-color)!important;
 }
 
@@ -63,24 +124,26 @@ Yellow: #FFCC35
   transition: transform 0.2s ease-in-out;
 }
 
+/* Dark/Light Mode Effects */
 :root {
   --background-color: #f0f0f0;
-  --foreground-color: #FFCC35;
-  --primary-text-color: #0a0a0a;
-  --secondary-text-color: #f6f6f6;
-  --toggle-bg: #f0eb9d;
-  --toggle-fg: #FFCC35;
+  --foreground-color: #3063e2;
+  --primary-text-color: #f6f6f6;
+  --secondary-text-color: #000000;
+  --toggle-bg: #050572;
+  --toggle-fg: #3063e2;
 }
 
 [data-theme="dark"] {
   --background-color: #0a0a0a;
-  --foreground-color: #5FBEFF;
-  --primary-text-color: #e5e2e2;
-  --secondary-text-color: #0a0a0a;
-  --toggle-bg: #1e48b3;
-  --toggle-fg: #5FBEFF;
+  --foreground-color: #050572;
+  --primary-text-color: #d8d4d4dc;
+  --secondary-text-color: #d8d4d4dc;
+  --toggle-bg: #3063e2;
+  --toggle-fg: #050572;
 }
 
+/* Toggle Button */
 .toggle-container {
   position: fixed;
   top: 2%;
