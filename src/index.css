@@ -79,7 +79,7 @@
 
 #previous-button, #next-button {
   color: var(--toggle-bg);
-  background-color: var(--background-color);
+  background-color: transparent;
   border: none;
   margin: 10px;
 }
