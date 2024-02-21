@@ -49,6 +49,12 @@
   animation: wave 6s infinite alternate;
 }
 
+/* Set text color for projects and footer in dark mode */
+[data-theme="dark"] #projects,
+[data-theme="dark"] .footer {
+  color: var(--primary-text-color);
+}
+
 @keyframes wave {
   0% {
     background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
@@ -71,7 +77,6 @@
 
 .github-link {
   color: var(--toggle-bg);
-  
   width: 70px;
   height: 70px;
   margin-top: 60px;
@@ -135,7 +140,7 @@
 }
 
 [data-theme="dark"] {
-  --background-color: #0a0a0a;
+  --background-color: #424242;
   --foreground-color: #050572;
   --primary-text-color: #d8d4d4dc;
   --secondary-text-color: #d8d4d4dc;
