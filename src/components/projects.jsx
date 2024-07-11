@@ -64,7 +64,7 @@ const Projects = () => {
     <div id="projects" className="p-3 pt-5">
       <div class="wave"/>
       <h2 className="text-center mb-3 underline-title">Check out some of my work:</h2>
-      <p> Please note that the sites you visit may be on free tiers, so a quick refresh might be needed for them to load properly.</p>
+      <p className="warning-text"> Please note that the sites you visit may be on free tiers, so a quick refresh might be needed for them to load properly.</p>
       <div className="container">
         <div className="d-flex justify-content-center">
           <div className="col-md-8 mb-5">

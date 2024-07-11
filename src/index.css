@@ -55,14 +55,15 @@
   color: var(--primary-text-color);
 }
 
-@keyframes wave {
+/* Background wave effect */
+/* @keyframes wave {
   0% {
     background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
   }
   100% {
     background-position: 200% 0, 200% 0, 200% 0, 200% 0, 200% 0, 200% 0;
   }
-}
+} */
 
 .custom-image {
   width: 100%;
@@ -192,4 +193,11 @@
 
 .toggle:checked + label::after {
   transform: translateX(100%);
+}
+
+
+.warning-text {
+  text-align: center;
+  color: red;
+  font-weight: bold;
 }
